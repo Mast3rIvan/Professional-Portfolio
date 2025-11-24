@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Programming Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="index.html">My Portfolio</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="content container">
+      <section id="bio">
+        <h1>Ivan Cazares</h1>
+        <h2>Computer Programmer Analyst</h2>
+        <img src="assets/banner.png" alt="Banner" class="banner" />
+        <p>I am a dedicated computer programmer analyst focused on delivering high-quality web applications and software solutions. My expertise spans the full stack, with proficiency in crafting responsive and dynamic user interfaces using HTML, CSS, and JavaScript. <br><br>I am highly skilled in back-end development, including data design, manipulation, and optimization using SQL Server, and I am comfortable deploying and managing applications within Linux environments. I am passionate about coding, problem-solving, and embracing new technology trends. Furthermore, my background in Level 1 and 2 IT support provides me with a unique perspective on user needs and system maintenance.</p>
+        </section>
+      <section id="languages">
+        <h2>Programming Languages & Tools</h2>
+        <ul class="languages">
+          <li>C#</li>
+          <li>SQL Server</li>
+          <li>Java</li>
+          <li>JavaScript</li>
+          <li>Python</li>
+          <li>HTML / CSS</li>
+          <li>R</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="container">
+    <p>&copy; <!-- YEAR --> <span id="year"></span> Saul Ivan Cazares Olivera</p>
+  </footer>
+
+  <script>
+    // Fill current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // simple nav toggle
+    document.querySelector('.nav-toggle').addEventListener('click', function(){
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

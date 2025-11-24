@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resume - Programming Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="index.html">My Portfolio</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+  </nav>
+
+  <main>
+    <div class="content container">
+      <h1>Resume</h1>
+
+      <section class="contact-info">
+        <p><strong>Saul Ivan Cazares Olivera</strong><br>
+        <a href="tel:289-990-1233">289-990-1233</a> | <a href="mailto:saul.ivan94@gmail.com">saul.ivan94@gmail.com</a></p>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <div class="edu-item">
+          <strong>Computer Programming and Analysis (Co-op)</strong><br>
+          Niagara College, Niagara-on-the-Lake, ON<br>
+          <em>January 2024 – Present</em>
+        </div>
+        <div class="edu-item" style="margin-top:.5rem">
+          <strong>Environmental Technician Field &amp; Lab (Co-op)</strong><br>
+          Niagara College, Niagara-on-the-Lake, ON<br>
+          <em>2019</em>
+        </div>
+      </section>
+
+      <section>
+        <h2>Technical Skills</h2>
+        <ul>
+          <li><strong>Languages:</strong> C#, Java, HTML, CSS, JavaScript</li>
+          <li><strong>Frameworks:</strong> ASP.NET, MAUI, UWP, MVC</li>
+          <li><strong>Tools:</strong> GitHub, SQL Server, Visual Studio</li>
+          <li><strong>User Interface Design:</strong> Developed accessible UIs using UWP, MAUI, and ASP.NET following WCAG standards</li>
+          <li><strong>Mobile Development:</strong> Built responsive mobile-first applications using MAUI and web technologies</li>
+          <li><strong>Object-Oriented Design:</strong> Applied MVC architecture, implemented role-based access control and reporting features</li>
+          <li><strong>Concepts:</strong> Object-Oriented Design, Responsive Design, WCAG Accessibility, Mobile-First Design</li>
+          <li><strong>CS Fundamentals:</strong> Proficient in data structures, algorithms, and relational database design</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Work Experience</h2>
+        <div class="work-item">
+          <strong>ITS Service Desk Support &amp; Computer Technician</strong> – Niagara College<br>
+          <em>September 2024 – Present</em>
+          <ul>
+            <li>Provided in-person and remote technical support.</li>
+            <li>Diagnosed and repaired hardware/software issues.</li>
+            <li>Managed support tickets with high resolution rates.</li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="download-row">
+        <a class="button" href="assets/resume.pdf" download>Download Resume (PDF)</a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function(){
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

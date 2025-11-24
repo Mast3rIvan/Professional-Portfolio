@@ -1,0 +1,140 @@
+:root{
+  /* Palette provided by user:
+     #4A4E69  - deep indigo (accent/dark)   
+     #9A8C98  - dusty mauve (muted)
+     #C9ADA7  - soft rose (warm)
+     #F2E9E4  - pale cream (background)
+     #22223B  - near-black navy (text)
+  */
+  --color-1: #4A4E69;
+  --color-2: #9A8C98;
+  --color-3: #C9ADA7;
+  --color-4: #F2E9E4;
+  --color-5: #22223B;
+
+  /* Semantic color tokens */
+  --bg: var(--color-4);
+  --card-bg: #ffffff;
+  --text: var(--color-5);
+  --muted: var(--color-2);
+  --accent: var(--color-1);
+  --warm: var(--color-3);
+  /* Typography tokens: change --base-font-size to scale the whole site */
+  --base-font-size: 18px; /* change this to 15px / 18px etc. to scale */
+  --body-font: system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;
+}
+*{box-sizing:border-box}
+html{font-size:var(--base-font-size)}
+body{font-family:var(--body-font);background:var(--bg);color:var(--text);margin:0}
+.container{max-width:900px;margin:2rem auto;padding:1.5rem 1rem}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:1.75rem 1rem;background:var(--color-5);border-bottom:1px solid rgba(0,0,0,0.06);position:relative}
+.nav .brand{color:var(--color-4)}
+.nav-links a{color:var(--color-4)}
+.nav-links a:hover{color:var(--accent)}
+.nav .brand{font-weight:700;text-decoration:none;color:var(--fg)}
+.nav-links{list-style:none;display:flex;gap:1rem;margin:0;padding:0}
+.nav-links a{text-decoration:none;color:var(--color-4)}
+.nav-toggle{display:none;background:none;border:0;font-size:1.25rem;color:var(--color-4)}
+
+.button{display:inline-block;padding:.5rem .75rem;background:var(--accent);color:var(--color-4);border-radius:4px;text-decoration:none;border:2px solid rgba(0,0,0,0.03)}
+.button:hover{filter:brightness(.95)}
+
+/* Utility text-size helpers (use sparingly) */
+.text-sm{font-size:.875rem}
+.text-md{font-size:1rem}
+.text-lg{font-size:1.125rem}
+
+.container h1,.container h2{margin-top:0;text-align:center}
+.languages{display:flex;gap:1rem;flex-wrap:wrap;padding:0;margin:0;list-style:none;justify-content:center}
+.languages li{background:var(--card-bg);padding:.5rem .75rem;border-radius:6px;border:1px solid rgba(0,0,0,0.06);color:var(--text)}
+
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;justify-items:center}
+.project-card{background:var(--card-bg);padding:1rem;border-radius:8px;border:1px solid rgba(0,0,0,0.06);max-width:340px;width:100%}
+.project-card h3{color:var(--accent)}
+.project-card a{color:var(--color-1);text-decoration:none}
+.project-card a:hover{text-decoration:underline}
+
+/* Content wrapper constrains text width inside the page container
+  Use .content to keep headings, paragraphs and forms centered and readable */
+.content{max-width:880px;margin:0 auto;padding:1.5rem;background:var(--color-3);border-radius:12px;box-shadow:0 10px 30px rgba(34,34,59,0.06);border:1px solid rgba(34,34,59,0.04)}
+.content{max-width:880px;margin:0 auto;padding:1.5rem 7.5rem;background:var(--color-3);border-radius:12px;box-shadow:0 10px 30px rgba(34,34,59,0.06);border:1px solid rgba(34,34,59,0.04)}
+.content p{max-width:100ch;margin:0.6rem auto;color:var(--text);line-height:1.6}
+.content h1,.content h2{text-align:center}
+.content h1{margin-bottom:.25rem}
+.content h2{margin-top:.25rem}
+.content .languages{justify-content:center}
+.project-card img{width:100%;height:auto;border-radius:4px}
+
+/* Banner image shown in the home bio section */
+.banner{width:100%;height:auto;margin-top:1rem;border-radius:8px;display:block}
+
+form{display:flex;flex-direction:column;gap:.5rem;max-width:540px}
+label{display:flex;flex-direction:column;font-size:.95rem}
+input,textarea{padding:.5rem;border:1px solid #ddd;border-radius:6px}
+button[type=submit]{padding:.6rem .8rem;background:var(--accent);color:#fff;border:0;border-radius:6px}
+
+/* Center the contact form inside the content area */
+.content form{margin:0.75rem auto;max-width:640px;display:flex;flex-direction:column;gap:0.75rem;padding:0}
+.content label{width:100%}
+.content input,.content textarea{width:100%}
+.content button[type=submit]{width:auto;align-self:center;padding:.6rem 1rem}
+
+footer{padding:2rem 1rem;text-align:center;color:var(--muted)}
+
+/* Links
+  Keep links visible on light background but consistent with palette */
+a{color:var(--accent)}
+a:hover{color:var(--color-2)}
+
+/* Download button row: right-aligned inside the content container */
+.download-row{display:flex;justify-content:flex-end;margin-top:1.25rem}
+.download-row .button{border-radius:6px;padding:.6rem .9rem}
+
+/* Responsive breakpoints
+   - phone:      up to 479px
+   - tablet:     480px — 767px
+   - laptop:     768px — 991px
+   - desktop:    992px — 1279px
+   - ultra-wide: 1280px and up
+   Mobile-first styles live above; these queries adjust layout and grid columns. */
+
+/* Phone (small phones) */
+@media (max-width:479px){
+  .container{margin:1rem auto;padding:0 0.75rem}
+  .nav-toggle{display:block}
+  .nav-links{display:none;flex-direction:column;background:#fff;position:absolute;top:calc(100% + 0.5rem);right:1rem;left:auto;padding:.5rem;border:1px solid #eee;border-radius:6px;box-shadow:0 6px 18px rgba(16,24,40,.08)}
+  .nav-links.open{display:flex}
+  .languages{flex-direction:column}
+  .projects-grid{grid-template-columns:1fr}
+  .content{padding:1rem}
+}
+
+/* Tablet */
+@media (min-width:480px) and (max-width:767px){
+  .container{max-width:720px}
+  .nav-toggle{display:block}
+  .nav-links{display:none;flex-direction:column;position:absolute;top:calc(100% + 0.5rem);right:1rem;left:auto;padding:.5rem;border:1px solid #eee;border-radius:6px;box-shadow:0 6px 18px rgba(16,24,40,.06)}
+  .nav-links.open{display:flex}
+  .projects-grid{grid-template-columns:repeat(2,1fr)}
+  .content{padding:1.25rem 2rem}
+}
+
+/* Laptop */
+@media (min-width:768px) and (max-width:991px){
+  .container{max-width:668px}
+  .nav-toggle{display:none}
+  .nav-links{display:flex;position:static;background:transparent;padding:0}
+  .projects-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+/* Desktop */
+@media (min-width:992px) and (max-width:1279px){
+  .container{max-width:892px}
+  .projects-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+/* Ultra-wide / large displays */
+@media (min-width:1280px){
+  .container{max-width:1180px}
+  .projects-grid{grid-template-columns:repeat(2,1fr)}
+}

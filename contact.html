@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact - Programming Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="index.html">My Portfolio</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+  </nav>
+
+  <main>
+    <div class="content container">
+      <h1>Contact</h1>
+      <p>Hiring managers can reach me or use the form below.</p>
+
+      <section class="contact-info">
+        <p><strong>Phone:</strong> <a href="tel:289-990-1233">289-990-1233</a><br>
+        <strong>Email:</strong> <a href="mailto:saul.ivan94@gmail.com">saul.ivan94@gmail.com</a></p>
+      </section>
+
+      <!-- Replace the action URL with your Formspree or other form endpoint -->
+      <form id="contact-form" action=https://formspree.io/f/xeowqkek method="POST">
+        <label>
+          Name
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="6" required></textarea>
+        </label>
+        <button type="submit">Send Message</button>
+        <p id="form-status" aria-live="polite"></p>
+      </form>
+    </div>
+  </main>
+
+  <script src="js/contact.js"></script>
+</body>
+</html>

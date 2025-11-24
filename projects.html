@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects - Programming Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="index.html">My Portfolio</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+  </nav>
+
+  <main>
+    <div class="content container">
+      <h1>Projects</h1>
+      <br>
+      <section class="projects-grid">
+        <article class="project-card">
+          <img src="assets/ChessKnight.png" alt="Chess Knight screenshot"/>
+          <h3>Chess Knight</h3>
+          <p>Chess Knight is a game that was created as a tool for chess beginners. Move the knight to valid squares on the board to practice your skills and capture as many pawns before the time runs out.</p>
+          <ul class="languages">
+            <li>C#</li>
+            <li>XAML</li>
+          </ul>
+          <p><a href="https://github.com/Mast3rIvan/ChessKnight">View details</a></p>
+        </article>
+        <article class="project-card">
+          <img src="assets/VirtualPet.png" alt="Virtual Pet screenshot"/>
+          <h3>Virtual Pet Companion</h3>
+          <p>Virtual Pet Companion is an interactive app where you care for a digital pet. Feed, give water, and play to keep your pet happy. The app uses the device's local time to calculate hunger, thirst, and boredom levels; all pet data is stored locally.</p>
+          <ul class="languages">
+            <li>Java</li>
+          </ul>
+          <p><a href="https://github.com/Mast3rIvan/VirtualPet">View details</a></p>
+        </article>
+        <article class="project-card">
+          <img src="assets/tv.png" alt="Attendance app screenshot"/>
+          <h3>Attendance Tracking Web App</h3>
+          <p>An MVC project to help organizations track volunteer attendance efficiently. Features include user authentication, attendance logging, and reporting capabilities.</p>
+          <ul class="languages">
+            <li>C#</li>
+            <li>ASP.NET MVC</li>
+            <li>SQL Server</li>
+          </ul>
+          <p><a href="https://github.com/Mast3rIvan/TomorrowsVoices">View details</a></p>
+        </article>
+        <article class="project-card">
+          <img src="assets/FlappyBird.png" alt="Flappy Bird screenshot"/>
+          <h3>Flappy Bird (MonoGame)</h3>
+          <p>A recreation of the popular mobile game Flappy Bird, built with the MonoGame engine.</p>
+          <ul class="languages">
+            <li>C#</li>
+            <li>MonoGame</li>
+          </ul>
+          <p><a href="https://github.com/Mast3rIvan/Flappy-Bird">View details</a></p>
+        </article>
+
+        <!-- Copy .project-card to add more projects. Place images under assets/projects/ -->
+      </section>
+    </div>
+  </main>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function(){
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
